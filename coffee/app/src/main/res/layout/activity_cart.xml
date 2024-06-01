@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity"
+    >
+    <RelativeLayout
+        android:id="@+id/layout_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50">
+        <ImageButton
+            android:id="@+id/AcBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_arrow_back"
+            android:background="#4CAF50"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/cart_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:text="Role"/>
+
+        <TextView
+            android:id="@+id/Acticart_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:textSize="17sp"
+            android:text="000000"
+            android:inputType="number">
+
+        </TextView>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/cart_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout_back">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Code"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/cart_inputCode"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/cart_checkCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Acticart_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cart_code">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
